@@ -3,12 +3,12 @@ import React from 'react';
 import { Offcanvas } from 'react-bootstrap';
 import Collapsible from 'react-collapsible';
 import { useSelector } from 'react-redux';
-import useAuth from '../../hooks/useAuth';
+
 
 
 const SidebarMenu = ({ show, handleClose }) => {
    const totalCartQuantity = useSelector(state => state.products.cartTotalQuantity);
-   const { user, logout } = useAuth();
+
    return (
       <>
 

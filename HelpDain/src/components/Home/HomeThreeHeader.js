@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
-import useAuth from '../../hooks/useAuth';
+
 import useSticky from '../../hooks/useSticky';
 import SidebarMenu from '../Sidebar/SidebarMenu';
 
@@ -14,7 +14,7 @@ const HomeThreeHeader = () => {
    // handle sidebar show
    const handleShow = () => setShow(true);
    //   user
-   const { user, logout } = useAuth();
+
    return (
       <>
          <header>
@@ -84,12 +84,7 @@ const HomeThreeHeader = () => {
                      </div>
                      <div className="col-xxl-3 col-xl-3 col-lg-2 col-md-8 col-6">
                         <div className="header__action d-flex align-items-center justify-content-end">
-                           <div className="header__login header__login-2 d-none d-sm-block">
-                              {user?.email ? < a onClick={logout} style={{ cursor: 'pointer' }} className='d-flex align-items-center'> <i className="fal fa-sign-out-alt"></i> Log Out</a> :
-                                 <Link href="/login">
-                                    < a> <i className="far fa-unlock"></i> Log In</a>
-                                 </Link>}
-                           </div>
+               
                            <div className="header__btn d-none d-xl-block">
                               <Link href="/contact">
                                  <a className="m-btn m-btn-2">get started</a>
