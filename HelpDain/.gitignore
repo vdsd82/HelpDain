@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 ../markit_doc
+/.next
 
 # testing
 /coverage
