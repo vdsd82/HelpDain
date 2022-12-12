@@ -13,12 +13,14 @@ if (typeof window !== "undefined") {
 
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyCOTzyD9nCW6DaO1sl0e0-4yuNSB0JKUNE',
-  authDomain: 'markit-next-js.firebaseapp.com',
-  projectId: 'markit-next-js',
-  storageBucket: 'markit-next-js.appspot.com',
-  messagingSenderId: '1068467809754',
-  appId: '1:1068467809754:web:80ad8acdcc2670ce09a4e3',
+  apiKey: "AIzaSyDbmhdQyYo42BS4i3zLAcUhZEk0FfPWgfA",
+  authDomain: "helpdain-903c9.firebaseapp.com",
+  projectId: "helpdain-903c9",
+  storageBucket: "helpdain-903c9.appspot.com",
+  messagingSenderId: "365643903871",
+  appId: "1:365643903871:web:ffa41433f1a55519e5a04a",
+measurementId: "G-437F9NCKFE"
+
 };
 initializeApp(firebaseConfig);
 
