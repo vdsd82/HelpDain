@@ -3,8 +3,8 @@ import React from 'react';
 import HomeThreeBlog from '../components/Home/HomeThreeBlog';
 import Header from '../components/Home/Header';
 import HomeThreeHeroArea from '../components/Home/HomeThreeHeroArea';
-import Footer from '../components/home/Footer';
 import SEO from '../components/seo';
+import Footer from '../components/Home/Footer';
 
 const index = () => {
    return (
