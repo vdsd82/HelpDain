@@ -32,7 +32,7 @@ const Header = () => {
                         <div className="main-menu d-flex justify-content-end">
                            <nav id="mobile-menu">
                               <ul>
-                                 <li className="has-dropdown active">
+                                 <li className="active">
                                     <Link href="/">
                                        <a >Home</a>
                                     </Link>
@@ -45,7 +45,7 @@ const Header = () => {
                                     </ul>
                                  </li>
                                  <li className="has-dropdown">
-                                    <Link href="/calcultor"><a >Calculator</a></Link>
+                                    <Link href="/calculator"><a >Calculator</a></Link>
 
                                     <ul className="submenu">
                                        <li><Link href="/calculator"><a >Calculator</a></Link></li>
