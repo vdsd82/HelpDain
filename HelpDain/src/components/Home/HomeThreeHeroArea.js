@@ -12,7 +12,7 @@ const HomeThreeHeroArea = () => {
                         <h2 className="hero__title">
                            The Best Lifestyle and Medical Calculator
                         </h2>
-                        <p><b>Helpdain.com </b> is a medical calculator and blog site that offers a wide range of tools and resources for healthcare professionals and individuals interested in learning more about healthcare and medicine. Our medical calculator allows users to quickly and easily perform complex calculations, such as determining medication dosages and interpreting lab results.</p>
+                        <p><b>HelpDian.com </b> is a medical calculator and blog site that offers a wide range of tools and resources for healthcare professionals and individuals interested in learning more about healthcare and medicine. Our medical calculator allows users to quickly and easily perform complex calculations, such as determining medication dosages and interpreting lab results.</p>
                         <div className="hero__search">
                            <form action="#">
                               <div className="hero__search-inner hero__search-3 d-md-flex align-items-center">
