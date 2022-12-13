@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import Pagination from '../common/Pagination';
 import BlogSideBar from './BlogSideBar';
-import SingleBlog from './SingleBlog';
+import SingleCalc from './SingleCalc';
 
 
 const BlogArea = () => {
@@ -33,7 +33,7 @@ const BlogArea = () => {
                      <div className="postbox__wrapper">
 
                         {
-                           currentBlogs.map(blog => <SingleBlog key={blog.id} blog={blog} />)
+                           currentBlogs.map(blog => <SingleCalc key={blog.id} blog={blog} />)
                         }
 
                         <Pagination productPerPage={blogPerPage} totalProduct={blogs.length}
