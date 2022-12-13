@@ -18,7 +18,7 @@ const SidebarMenu = ({ show, handleClose }) => {
                   <div className="logo">
                      <Link href="/home">
                         <a>
-                           <img src="assets/img/logo/logo-white.png" alt="logo" />
+                           <img src="assets/img/logo/HD.png" alt="logo" />
                         </a>
                      </Link>
                   </div>
