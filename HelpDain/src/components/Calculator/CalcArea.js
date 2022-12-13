@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import Pagination from '../common/Pagination';
-import BlogSideBar from './BlogSideBar';
+import CalcSideBar from './CalcSideBar';
 import SingleCalc from './SingleCalc';
 
 
@@ -42,7 +42,7 @@ const BlogArea = () => {
                      </div>
                   </div>
 
-                  <BlogSideBar />
+                  <CalcSideBar />
                </div>
             </div>
          </section>
