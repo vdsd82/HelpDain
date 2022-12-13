@@ -45,6 +45,14 @@ const Header = () => {
                                     </ul>
                                  </li>
                                  <li className="has-dropdown">
+                                    <Link href="/calcultor"><a >Calculator</a></Link>
+
+                                    <ul className="submenu">
+                                       <li><Link href="/calculator"><a >Calculator</a></Link></li>
+                                       <li><Link href="/calc-details"><a >Calculator Details</a></Link></li>
+                                    </ul>
+                                 </li>
+                                 <li className="has-dropdown">
                                     <Link href="/blog"><a >Blog</a></Link>
 
                                     <ul className="submenu">

@@ -11,14 +11,14 @@ const ContactInfo = () => {
       {
          id: 2,
          icon_img: 'assets/img/icon/contact/mail.png',
-         title: 'support@markit.com',
-         subtitle: 'info@markit.com'
+         title: 'uttertechnology@gmail.com',
+         subtitle: 'Support'
       },
       {
          id: 3,
          icon_img: 'assets/img/icon/contact/phone.png',
-         title: '+(624) 7600 96',
-         subtitle: '+(420) 244 26'
+         title: '',
+         subtitle: ''
       },
    ]
    return (
