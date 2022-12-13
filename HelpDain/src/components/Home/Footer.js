@@ -32,15 +32,15 @@ const Footer = () => {
                         <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-sm-6">
                            <div className="footer__widget mb-40 wow fadeInUp" data-wow-delay=".5s">
                               <div className="footer__widget-head">
-                                 <h4 className="footer__widget-title footer__widget-title-2">Products</h4>
+                                 <h4 className="footer__widget-title footer__widget-title-2">Calculators</h4>
                               </div>
                               <div className="footer__widget-content">
                                  <div className="footer__link footer__link-2">
                                     <ul>
-                                       <li><a href="#">Tutor LMS </a></li>
-                                       <li><a href="#">WP Mega Menu </a></li>
-                                       <li><a href="#">WP Page Builder </a></li>
-                                       <li><a href="#">Themes</a></li>
+                                       <li><a href="#">Medical Calculators </a></li>
+                                       <li><a href="#">Lifestyle Calculators </a></li>
+                                       <li><a href="#">Health Calculators </a></li>
+                                       <li><a href="#">Love Calculator</a></li>
                                        <li><a href="#">Interactions</a></li>
                                     </ul>
                                  </div>
@@ -50,16 +50,15 @@ const Footer = () => {
                         <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
                            <div className="footer__widget mb-40 wow fadeInUp footer__widget-pl-70" data-wow-delay=".7s">
                               <div className="footer__widget-head">
-                                 <h4 className="footer__widget-title footer__widget-title-2">Resources</h4>
+                                 <h4 className="footer__widget-title footer__widget-title-2">Pages</h4>
                               </div>
                               <div className="footer__widget-content">
                                  <div className="footer__link footer__link-2">
                                     <ul>
-                                       <li><a href="#">Promotion </a></li>
-                                       <li><a href="#">Submit Content</a></li>
-                                       <li><a href="#">Resources</a></li>
-                                       <li><a href="#">Design System</a></li>
-                                       <li><a href="#">Expert</a></li>
+                                       <li><a href="#">About Us </a></li>
+                                       <li><a href="#">Contact us</a></li>
+                                       <li><a href="#">Disclaimer</a></li>
+                                       <li><a href="#">Privacy Policy</a></li>
                                     </ul>
                                  </div>
                               </div>
@@ -92,7 +91,7 @@ const Footer = () => {
                         <div className="row">
                            <div className="col-xxl-6 col-xl-6 col-md-6">
                               <div className="footer__copyright footer__copyright-2 wow fadeInUp" data-wow-delay=".5s">
-                                 <p>Copyright © 2022 All Rights Reserved, Design by <a href="#">Theme Pure</a></p>
+                                 <p>Copyright Helpdain © 2022 All Rights Reserved, Design by <a href="#">UtterTechnology.com</a></p>
                               </div>
                            </div>
                            <div className="col-xxl-6 col-xl-6 col-md-6">
@@ -100,7 +99,6 @@ const Footer = () => {
                                  <ul>
                                     <li><a href="#">Licence</a></li>
                                     <li><a href="#">Privacy Policy </a></li>
-                                    <li><a href="#">Affiliate Notice</a></li>
                                  </ul>
                               </div>
                            </div>
