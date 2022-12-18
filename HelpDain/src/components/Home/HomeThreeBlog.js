@@ -2,10 +2,14 @@ import Link from 'next/link';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { specificBlog } from '../../redux/features/blogSlice';
+import { getAllPosts,getPostBySlug } from '../common/apicalculator';
 
-const HomeThreeBlog = () => {
-   const blogs = useSelector(state => state.blogs.blogs);
+
+const  HomeThreeBlog = ({posts}) => {
+   //const blogs = useSelector(state => state.blogs.blogs);
    // dispatch
+   const blogs =  posts
+    console.log(blogs)
    const dispatch = useDispatch();
    return (
       <>
@@ -21,11 +25,11 @@ const HomeThreeBlog = () => {
                </div>
                <div className="row">
                   {
-                     blogs.slice(0, 3).map((blog, index) => {
+                     blogs.map((blog, index) => {
                         return <div key={index} className="col-xl-4 col-lg-4 col-md-6">
                            <div className="latest-blog mb-30">
                               <div className="latest-blog-img pos-rel">
-                                 <img src={blog.img} alt="" />
+                                 <img src={blog.coverImage} alt="" />
                                  <div className="top-date">
                                     <Link href="/blog-details"><a onClick={() => dispatch(specificBlog(blog.id))}>{blog.date}</a></Link>
                                  </div>
@@ -64,3 +68,5 @@ const HomeThreeBlog = () => {
 };
 
 export default HomeThreeBlog;
+
+

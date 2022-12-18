@@ -2,12 +2,10 @@ import Link from 'next/link';
 import React from 'react';
 import { Offcanvas } from 'react-bootstrap';
 import Collapsible from 'react-collapsible';
-import { useSelector } from 'react-redux';
 
 
 
 const SidebarMenu = ({ show, handleClose }) => {
-   const totalCartQuantity = useSelector(state => state.products.cartTotalQuantity);
 
    return (
       <>
