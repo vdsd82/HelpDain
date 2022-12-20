@@ -5,9 +5,10 @@ import BlogSideBar from './BlogSideBar';
 import SingleBlog from './SingleBlog';
 
 
-const BlogArea = () => {
+const BlogArea = ({posts}) => {
    // all blogs
-   const blogs = useSelector(state => state.blogs.blogs);
+   const blogs = posts;
+   console.log(blogs)
    // current page
    const [currentPage, setCurrentPage] = useState(1);
    // blog per page 
@@ -33,7 +34,7 @@ const BlogArea = () => {
                      <div className="postbox__wrapper">
 
                         {
-                           currentBlogs.map(blog => <SingleBlog key={blog.id} blog={blog} />)
+                           currentBlogs.map(blog => <SingleBlog key={blog.title} blog={blog} />)
                         }
 
                         <Pagination productPerPage={blogPerPage} totalProduct={blogs.length}
@@ -42,7 +43,7 @@ const BlogArea = () => {
                      </div>
                   </div>
 
-                  <BlogSideBar />
+                  <BlogSideBar post={blogs}/>
                </div>
             </div>
          </section>

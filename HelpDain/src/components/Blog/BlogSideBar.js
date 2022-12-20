@@ -2,10 +2,11 @@ import Link from 'next/link';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { specificBlog } from '../../redux/features/blogSlice';
+import DateFormatter from '../common/DateFormatter';
 
-const BlogSideBar = () => {
-   const sidebarBlogs = useSelector(state => state.blogs.blogs);
-   const dispatch = useDispatch();
+
+const BlogSideBar = ({post}) => {
+   const sidebarBlogs = post
    return (
       <>
          <div className="col-xxl-4 col-xl-4 col-lg-4">
@@ -23,26 +24,28 @@ const BlogSideBar = () => {
                   </div>
                   <div className="sidebar__widget mb-30">
                      <div className="sidebar__widget-title">
-                        <h3>Recent News</h3>
+                        <h3>Recent Aricles</h3>
                      </div>
                      <div className="sidebar__widget-content">
                         <div className="rc__post-wrapper">
 
                            {
                               sidebarBlogs.slice(1, 4).map(blog => {
-                                 return <div key={blog.id} className="rc__post d-flex align-items-center">
-                                    <div className="rc__thumb mr-15" onClick={()=> dispatch(specificBlog(blog.id))}>
+                                 return <div key={blog.title} className="rc__post d-flex align-items-center">
+                                    <div className="rc__thumb mr-15" onClick={()=> dispatch(blog.title)}>
                                        <Link href="/blog-details">
-                                          <a ><img src={blog.sm_img} alt="" /></a>
+                                          <a ><img src={blog.img} alt="" /></a>
                                        </Link>
                                     </div>
                                     <div className="rc__content">
                                        <div className="rc__meta">
-                                          <span>{blog.date}</span>
+                                          <span>
+                                          <DateFormatter dateString={blog.date} />
+                                             </span>
                                        </div>
-                                       <h6 className="rc__title" onClick={()=> dispatch(specificBlog(blog.id))}>
-                                          <Link href="/blog-details">
-                                             <a >{blog.title.substring(0,40)}...</a>
+                                       <h6 className="rc__title">
+                                       <Link href="/blog-details/[slug]" as={`/blog-details/${blog.slug}`}>
+                                          <a>{blog.title.substring(0,40)}...</a>
                                           </Link>
                                        </h6>
                                     </div>

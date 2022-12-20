@@ -3,13 +3,14 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { specificBlog } from '../../redux/features/blogSlice';
 import { getAllPosts,getPostBySlug } from '../common/apicalculator';
+import DateFormatter from '../common/DateFormatter';
+
 
 
 const  HomeThreeBlog = ({posts}) => {
    //const blogs = useSelector(state => state.blogs.blogs);
    // dispatch
    const blogs =  posts
-    console.log(blogs)
    const dispatch = useDispatch();
    return (
       <>
@@ -30,16 +31,17 @@ const  HomeThreeBlog = ({posts}) => {
                            <div className="latest-blog mb-30">
                               <div className="latest-blog-img pos-rel">
                                  <img src={blog.coverImage} alt="" />
-                                 <div className="top-date">
-                                    <Link href="/blog-details"><a onClick={() => dispatch(specificBlog(blog.id))}>{blog.date}</a></Link>
-                                 </div>
                               </div>
                               <div className="latest-blog-content">
                                  <div className="latest-post-meta mb-15">
-                                    <span><Link href="/blog-details"><a onClick={() => dispatch(specificBlog(blog.id))}>
-                                       <i className="far fa-user"></i> Diboli </a></Link></span>
-                                    <span><Link href="/blog-details"><a onClick={() => dispatch(specificBlog(blog.id))}>
-                                       <i className="far fa-comments"></i> 23 Comments</a></Link></span>
+                                    
+                                       <span><Link href="/blog-details/[slug]" as={`/blog-details/${blog.slug}`}><a> {blog.name} </a>
+                                      </Link></span>
+                                    <span><Link href="/blog-details/[slug]" as={`/blog-details/${blog.slug}`}>
+                                       <DateFormatter dateString={blog.date} />
+                                      </Link></span>
+
+
                                  </div>
                                  <h3 className="latest-blog-title">
                                     <Link href="/blog-details">

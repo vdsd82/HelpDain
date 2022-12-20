@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { specificBlog } from '../../redux/features/blogSlice';
 import BlogSideBar from '../Blog/BlogSideBar';
 
+
 const BlogDetailsArea = () => {
    const blogs = useSelector(state => state.blogs.blogs);
    const blogItem = useSelector(state => state.blogs.specificItem);

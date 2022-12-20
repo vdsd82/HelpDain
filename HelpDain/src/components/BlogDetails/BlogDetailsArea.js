@@ -1,14 +1,15 @@
 import Link from 'next/link';
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { specificBlog } from '../../redux/features/blogSlice';
 import BlogSideBar from '../Blog/BlogSideBar';
 
-const BlogDetailsArea = () => {
-   const blogs = useSelector(state => state.blogs.blogs);
-   const blogItem = useSelector(state => state.blogs.specificItem);
-   //  dispatch
-   const dispatch = useDispatch();
+const BlogDetailsArea = ({posts}) => {
+   // const blogs = useSelector(state => state.blogs.blogs);
+   // const blogItem = useSelector(state => state.blogs.specificItem);
+   // //  dispatch
+   // const dispatch = useDispatch();
+   const blogs = posts.allPosts
+
    return (
       <>
          <section className="page__title-area  pt-85">
@@ -20,26 +21,26 @@ const BlogDetailsArea = () => {
                            <div className="postbox__tag-2">
                               {/* <a href="#">Digital,</a>
                               <a href="#">Marketing. </a> */}
-                              <a href="#">{blogItem.category}</a>
+                              <a href="#">{posts.category}</a>
                            </div>
                            <div className="postbox__time">
                               <span>4 min read</span>
                            </div>
                         </div>
-                        <h2 className="page__title">{blogItem.title}</h2>
+                        <h2 className="page__title">{posts.title}</h2>
                         <div className="postbox__author-2 mt-20">
                            <ul className="d-flex align-items-center">
                               <li>
                                  <div className="postbox__author-thumb-2">
-                                    <img src={blogItem.user_img} alt="" />
+                                    <img src={posts.user_img} alt="" />
                                  </div>
                               </li>
                               <li>
-                                 <h6><a href="#">{blogItem.name}</a></h6>
+                                 <h6><a href="#">{posts.name}</a></h6>
                                  <span><a href="#">View Profile</a></span>
                               </li>
                               <li>
-                                 <h6>{blogItem.date}</h6>
+                                 <h6>{posts.date}</h6>
                                  <span>Published</span>
                               </li>
                               <li className="d-none d-sm-block">
@@ -62,7 +63,7 @@ const BlogDetailsArea = () => {
                   <div className="col-xxl-8 col-xl-8 col-lg-8">
                      <div className="postbox__wrapper">
                         <div className="postbox__thumb postbox__thumb-2 fix w-img mb-30">
-                           <a href="#"><img src={blogItem.img} alt="" /></a>
+                           <a href="#"><img src={posts.img} alt="" /></a>
                         </div>
                         <div className="postbox__details mb-30">
                            <p className="drop-cap">Here’s a scenario — you’re participating in a user test for your favorite music app. At the end of the day, design is the manipulation of stimuli and information, so working with the stimuli.</p>
@@ -136,7 +137,7 @@ const BlogDetailsArea = () => {
                                           <div className="blog__thumb-2 w-img mb-20">
                                              <Link href="/blog-details">
                                                 <a >
-                                                   <img src={blog.img} alt="" />
+                                                   <img src={posts.img} alt="" />
                                                 </a>
                                              </Link>
                                           </div>
@@ -284,7 +285,7 @@ const BlogDetailsArea = () => {
                      </div>
                   </div>
 
-                  <BlogSideBar />
+                  <BlogSideBar post={blogs}/>
 
                </div>
             </div>

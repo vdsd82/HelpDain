@@ -4,6 +4,8 @@ import { useDispatch } from 'react-redux';
 import { specificBlog } from '../../redux/features/blogSlice';
 import { Modal } from 'react-responsive-modal';
 import ReactPlayer from "react-player";
+import DateFormatter from '../common/DateFormatter';
+
 
 const SingleBlog = ({ blog }) => {
    // video open state
@@ -18,14 +20,17 @@ const SingleBlog = ({ blog }) => {
    const handleBlogDetails = () => {
       dispatch(specificBlog(id))
    }
+   console.log(blog.img)
+   const href = "/blog-details/"+ blog.slug
+
    return (
       <>
 
          <article className="postbox__item  format-video fix mb-50 wow fadeInUp" data-wow-delay=".5s">
             <div className="postbox__thumb postbox__video">
-               <Link href="/blog-details">
-                  <a onClick={handleBlogDetails} className="w-img">
-                     <img src={img} alt="" />
+               <Link href={href} passHref>
+                  <a  className="w-img">
+                     <img src={blog.coverImage} alt="" />
                   </a>
                </Link>
                {/* {videoPopup && <div className="postbox__play">
@@ -65,13 +70,15 @@ const SingleBlog = ({ blog }) => {
                      <a href="#">{category}</a>
                   </div>
                   <div className="postbox__date">
-                     <span><i className="fal fa-clock"></i>{date}</span>
+                     <span><i className="fal fa-clock"></i>
+                     <DateFormatter dateString={date} />
+                     </span>
                   </div>
                </div>
-               <h3 onClick={handleBlogDetails} className="postbox__title mb-15">
-                  <Link href="/blog-details">
-                     <a >{title}</a>
-                  </Link>
+               <h3 className="postbox__title mb-15">
+               <Link href="/blog-details/[slug]" as={`/blog-details/${blog.slug}`}>
+                                          <a>{blog.title.substring(0,40)}...</a>
+                                          </Link>
                </h3>
                <div className="postbox__text mb-20">
                   <p>{desc}</p>

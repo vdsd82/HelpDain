@@ -33,7 +33,6 @@ export async function getStaticProps() {
          'coverImage',
          'desc',
          'content'])
-      console.log(allPosts)
     
       return {
         props:  {
