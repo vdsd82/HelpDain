@@ -30,7 +30,7 @@ const Header = () => {
                 <div className="logo">
                   <Link href="/">
                     <a>
-                      <img src="assets/img/logo/HD.png" alt="logo" />
+                      <img src="/assets/img/logo/HD.png" alt="logo" />
                     </a>
                   </Link>
                 </div>
@@ -73,24 +73,6 @@ const Header = () => {
                           <li>
                             <Link href="/calc-details">
                               <a>Calculator Details</a>
-                            </Link>
-                          </li>
-                        </ul>
-                      </li>
-                      <li className="has-dropdown">
-                        <Link href="/blog">
-                          <a>Blog</a>
-                        </Link>
-
-                        <ul className="submenu">
-                          <li>
-                            <Link href="/blog">
-                              <a>Blog</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/blog-details">
-                              <a>Blog Details</a>
                             </Link>
                           </li>
                         </ul>
