@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://helpdian.com
+Host: https://rxcalcs.com
 
 # Sitemaps
-Sitemap: https://helpdian.com/sitemap.xml
+Sitemap: https://rxcalcs.com/sitemap.xml
